@@ -11,7 +11,7 @@ environment =  sys.argv[1] if len(sys.argv) == 2 else "default"  # 目前只支�
 app = create_app()
 
 if environment in ["default", "dev"]:
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://dwmeta:dwmeta@mysql.dsc.bigdata.bitauto.com/dwmeta'
+    app.config['SQLALCHEMY_DATABASE_URI'] = ''
     app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
@@ -19,7 +19,7 @@ if environment in ["default", "dev"]:
     app.config['SQLALCHEMY_POOL_TIMEOUT'] = 10
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 elif environment == "pro":
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://dwmeta:dwmeta@mysql.dsc.bigdata.bitauto.com/dwmeta'
+    app.config['SQLALCHEMY_DATABASE_URI'] = ''
     app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     app.config['SQLALCHEMY_POOL_SIZE'] = 20
