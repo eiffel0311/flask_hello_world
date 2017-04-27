@@ -1,6 +1,8 @@
 flask hello world:
 
 you can change manage.py's configure
-start app: python manage.py
+start app: python manage.py dev
 
-visit from broser: http://127.0.0.1:5000/api/v1.0/hello_world
+this example dir like rails, hope you known ruby and rails(but there is not migration shell)
+
+the dir structure important, code nothing
